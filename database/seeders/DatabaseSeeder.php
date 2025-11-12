@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Post;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -25,6 +26,10 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Alfarell',
             'email' => 'malfarell@example.com',
+        ]);
+
+        Post::factory(10)->create([
+            'title' => 'Post Created',
         ]);
     }
 }
