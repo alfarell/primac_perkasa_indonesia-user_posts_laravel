@@ -8,6 +8,6 @@ class UserController extends Controller
 {
     public function index()
     {
-        return User::with('posts')->get();
+        return User::with('posts')->paginate(10);
     }
 }
